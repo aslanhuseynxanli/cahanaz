@@ -13,13 +13,23 @@
       color: #fbeecb;
       text-align: center;
     }
-    .container {
-      background: linear-gradient(to right, #9d0000, #b50000);
-      padding: 40px;
-      max-width: 900px;
-      margin: 20px auto;
-      /* border: 10px solid #a00000; */
-    }
+.container {
+  background: linear-gradient(
+    to right,
+    #7a0000 0%,
+    #b50000 25%,
+    #b81313 50%,
+    #aa0101 75%,
+    #7a0000 100%
+  );
+  padding: 40px;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+
+
     .logo {
       display: flex;
       justify-content: center;
@@ -93,7 +103,7 @@
 
     <!-- QR kod -->
     <div class="qr">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://example.com&size=150x150" alt="QR Kod">
+      <img src="/cahanazqr.png" alt="QR Kod">
     </div>
   </div>
 
