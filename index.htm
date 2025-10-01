@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dəvət</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Times New Roman", serif;
+      /* background: #a00000; */
+      color: #fbeecb;
+      text-align: center;
+    }
+    .container {
+      background: linear-gradient(to right, #9d0000, #b50000);
+      padding: 40px;
+      max-width: 900px;
+      margin: 20px auto;
+      /* border: 10px solid #a00000; */
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .logo img {
+      height: 60px;
+    }
+    .divider {
+      border-top: 1px solid gold;
+      margin: 20px auto;
+      width: 80%;
+    }
+    .content {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+    .guest {
+      font-weight: bold;
+    }
+    .signature {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 18px;
+    }
+    .sign-img {
+      margin: 20px auto;
+      display: block;
+      height: 50px;
+    }
+    .qr {
+      margin-top: 40px;
+    }
+    .qr img {
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Logo hissəsi -->
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Red_circle.svg/1200px-Red_circle.svg.png" alt="Cahan Logo">
+      <!-- <img src="https://dummyimage.com/80x60/000/fff&text=30" alt="30 İllik"> -->
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Mətn hissəsi -->
+    <div class="content">
+      <p>
+        Hörmətli <span class="guest" id="guestName">[Ad Soyad]</span>,<br>
+        Sizi 27 oktyabr 2025-ci il tarixində Naxçıvan şəhərində yerləşən <br>
+        “Naxçıvan Palace” da təşkil olunacaq Cahan Holdingin <br>
+        30 illik yubiley tədbirinə dəvət etməkdən <br>
+        böyük məmnunluq hissi duyuruq.
+      </p>
+
+      <div class="signature">
+        Hörmətlə <br>
+        Vüqar Z. Abbasov <br>
+        Cahan Holdingin Təsisçisi və Prezidenti
+      </div>
+
+      <img src="https://dummyimage.com/200x50/fff/000&text=Signature" alt="İmza" class="sign-img">
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- QR kod -->
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://example.com&size=150x150" alt="QR Kod">
+    </div>
+  </div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const ad = params.get("ad") || "Qonaq";
+    const soyad = params.get("soyad") || "";
+    document.getElementById("guestName").textContent = ad + " " + soyad;
+</script>
+
+</body>
+</html>
